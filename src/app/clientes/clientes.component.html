@@ -1,0 +1,28 @@
+<div class=" d-flex justify-content-center">
+    <div class="card text-bg-primary m-3 flex-fill " style="max-width: 60%;">
+        <div class="card-header">Clientes</div>
+        <div class="card-body">
+          <h5 class="card-title">Listado de Clientes</h5>
+          <table>
+            <thead>
+                <tr>
+                    <th class="p-2 g-col-3">id</th>
+                    <th class="p-2 g-col-3">nombre</th>
+                    <th class="p-2 g-col-3">apellido</th>
+                    <th class="p-2 g-col-3">email</th>
+                    <th class="p-2 g-col-3">createAt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td class="p-2 g-col-3">{{cliente.id}}</td>
+                    <td class="p-2 g-col-3">{{cliente.nombre}}</td>
+                    <td class="p-2 g-col-3">{{cliente.apellido}}</td>
+                    <td class="p-2 g-col-3">{{cliente.email}}</td>
+                    <td class="p-2 g-col-3">{{cliente.createAt}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
