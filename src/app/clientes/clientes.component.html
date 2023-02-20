@@ -1,12 +1,12 @@
 <div class="content">
-    <div class="card text-bg-primary m-4" style="">
+    <div class="card m-4" >
         <div class="card-header">Clientes</div>
         <div class="card-body">
           <h5 class="card-title">Listado de Clientes</h5>
           <div class="my-2 d-flex justify-content-start">
             <button class="btn btn-success btn-sm" [routerLink]="['/clientes/form']">Crear Cliente</button>
           </div>
-          <table class="">
+          <table class="table-striped text-center">
             <thead>
                 <tr>
                     <th class="p-2 g-col-3">id</th>
@@ -14,6 +14,7 @@
                     <th class="p-2 g-col-3">apellido</th>
                     <th class="p-2 g-col-3">email</th>
                     <th class="p-2 g-col-3">createAt</th>
+                    <th>editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,9 @@
                     <td class="p-2 g-col-3">{{cliente.apellido}}</td>
                     <td class="p-2 g-col-3">{{cliente.email}}</td>
                     <td class="p-2 g-col-3">{{cliente.createAt}}</td>
+                    <td>
+                      <button type="button" name="button" [routerLink]="['/clientes/form', cliente.id]" class="btn btn-primary">editar</button>
+                    </td>
                 </tr>
             </tbody>
           </table>
